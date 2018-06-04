@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header -->
+  <!-- left -->
+  <header>
+    <div class="header-main">
+      <div class="left">
+        <div class="logo">
+          <img src="images/logo.png" alt="google logo" title="Drive">
+        <span class="drive-text" title="Drive">Drive</span>
+        </div>
+        
+        <img class="search-icon" id="searchIcon" src="images/search-icon.png" alt="search icon" title="search">
+        <input class="search-bar" id="searchBar" type="search" placeholder="Search Drive">
+        <div class="file-ext" id= "fileExtName" style="display: none;">
+          <ul>
+            <li><a href="#"><img src="images/document-icon.png" alt="text doument"><span class="document-type">Text Documents</span></a></li>
+            <li><a href="#"><img src="images/spreadsheet-icon.png" alt=spreadsheets"><span class="document-type">Spreadsheets</span></a></li>
+            <li><a href="#"><img src="images/presentation-icon.png" alt="presentations"><span class="document-type">Presentations</span></a></li>
+            <li><a href="#"><img src="images/photo-icon.png" alt="photo & Images"><span class="document-type">photo & Images</span></a></li>
+            <li><a href="#"><img src="images/photo-icon.png" alt="Vedios"><span class="document-type">Vedios</span></a></li>
+            <li><a class="file-ext-more" href="#">More search tools</a></li>
+          </ul>
+        </div>
+        <div class="caret-wrappper" id="caretWrappper" onclick="searchByType()">
+          <div class="caret for-head-search"></div>
+        </div>
+        <div class="search-by-type" id="searchByType">
+          <form action="submit">
+            <div class="close-btn" onclick="closeMenu()">
+              <span class="cross-line line1"></span>
+              <span class="cross-line line2"></span>
+            </div>
+            <label for="document-type">Type</label>
+            <input class="input-box input-style" type="text" placeholder="Any" ><div class="caret for-input-one"></div><br>
+            <label for="owner">Owner</label>
+            <input class="input-box input-style" type="text" placeholder="Anyone"><div class="caret for-input-two"></div><br>
+            <label for="location">location</label><button class="btn-top">ANYWHERE</button><br>
+            <label class="container">
+              <input class="checkbox" type="checkbox"> 
+              <span class="checkmark"></span>
+            </label>
+            <span>In Bin</span>
+            <label class="container">
+              <input class="checkbox" type="checkbox"> 
+              <span class="checkmark"></span>
+            </label>
+            <span>Starred</span><hr>
+             
+             <label for="date-modified">Date modified</label>
+             <input class="input-box input-style" type="" placeholder="Any time"><br>
+             <label for="name of item">Item name</label>
+             <input class="input-box-long" type="name of item" placeholder="Enter a term that matches part of the file name"><br>
+             <label for="Include the words">Include the words</label>
+             <input class="input-box-long" type="text" placeholder="Enter word found in the file"><br>
+             <label for="shared">Shared with</label>
+             <input class="input-box-long" type="enter name or email" placeholder="Enter a name or email address..."><br>
+             <label for="follow">Folow up</label>
+             <input class="input-box-long" type="follow" placeholder="-"><br>
+             <button class="btn-learn-more">LEAR MORE</button>
+             <button class="reset-btn" title="Reset search option">RESET</button>
+             <button class="search-btn" title="Search Google Drive">SEARCH</button>
+           </form>
+         </div>
+      </div>
+    <!-- /left -->
+
+    <!-- right -->
+      <div class="right">
+        <div class="social-icon" id="socialIcon">
+            <ul>
+              <li>
+                <a href="#">
+                  <span><img src="images/account-icon.png" alt="account"></span>
+                  <span class="google-apps">My Account</span>
+                </a> 
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/google-icon.png" alt="google"></span>
+                  <span class="google-apps">Google</span>
+                </a>   
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/location-icon.png" alt="loctaion"></span>
+                  <span class="google-apps">Map</span>
+                </a>   
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/youtube-icon.png" alt="drive"></span>
+                  <span class="google-apps">You Tube</span>
+                </a>    
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/play-icon.png" alt="google play"></span>
+                  <span class="google-apps">Play</span>
+                </a>  
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/gmail-icon.png" alt="calender"></span>
+                  <span class="google-apps">Gmail</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/drive-icon.png" alt="gmail"></span>
+                  <span class="google-apps">Drive</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/calender-icon.png" alt="drive"></span>
+                  <span class="google-apps">Calender</span>
+                </a>    
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/google-plus-icon.png" alt="google play"></span>
+                  <span class="google-apps">Google+</span>
+                </a>  
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/translate-icon.png" alt="calender"></span>
+                  <span class="google-apps">Translate</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span><img src="images/google-photos.png" alt="gmail"></span>
+                  <span class="google-apps">Photos</span>
+                </a>
+              </li>
+            </ul>
+            <div class="clear"></div>
+            <span class="more-option">More</span>
+          </div>
+        <div class="app-toggle-btn" title="Google apps" onclick= 'toggle()'>
+          <div class="toggle-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="toggle-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="toggle-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <img class="notification" src="images/notification-icon.png" alt="notification" title="notification">
+        <img class="user-profile" src="images/user-picture.png" alt="user profile" title="Google Account <br> Vijay Kumar <br> vkvijaykumar14@gmail.com">
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  <!-- /right -->
+  
+  <!-- sub-header -->
+  <div class="sub-header">
+    <div class="left">
+      <button class="new-file-type" onclick="newDocList()" value="submit">NEW</button>
+      <div id="newDocList" class="new-doc-list">
+        <ul>
+          <li><a href="#">Folder</a></li><hr>
+          <li><a href="#">File Upload</a></li>
+          <li><a href="#">Folder Upload</a></li><hr>
+          <li><a href="#">Google Docs<span><strong>></strong></span></a></li>
+          <li><a href="#">Google Sheets<span><strong>></strong></span></a></li>
+          <li><a href="#">Google Slides<span><strong>></strong></span></a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+      </div>
+      <button class="drive-option">My Drive
+        <div id="MyDriveList" class="my-drive-list">
+          <ul>
+            <li><a href="#">Folder</a></li><hr>
+            <li><a href="#">File Upload</a></li>
+            <li><a href="#">Folder Upload</a></li><hr>
+            <li><a href="#">Google Docs<span><strong>></strong></span></a></li>
+            <li><a href="#">Google Sheets<span><strong>></strong></span></a></li>
+            <li><a href="#">Google Slides<span><strong>></strong></span></a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+        </div>
+      <div class="caret1 for-head-search"></div>
+      </button>
+    </div>
+    <div class="right">
+      <div class="list-toggle" title="List view">
+        <div class="list-toggle-btn-left">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="list-toggle-btn-right">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <img src="images/detail-weiv-icon.png" alt="details" title="wiev details">
+      <img src="images/setting-icon.png" alt="settings" title="setting">
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <!-- /sub-header -->
+  </header>
+  <!-- /header -->
+
+  <!-- main -->
+  <main>
+    <nav>
+      <ul>
+        <li>
+          <a href=""><div class="caret-right"></div>
+            <svg class="svg-class" width="24px" height="24px" viewBox="0 0 24 24" fill="#4285f4" focusable="false"><path d="M0 0h24v24H0z" fill="none"></path><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"></path></svg>
+            <span class="list-name">My Drive</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="caret-right"></div>
+            <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#4285f4" focusable="false"><path d="M0 0h24v24H0z" fill="none"></path><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"></path></svg>
+            <span class="list-name">Computers</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#4285f4" focusable="false"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
+            <span class="list-name">Shared with me</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#4285f4" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path><path d="M0 0h24v24H0z" fill="none"></path><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg>  
+            <span class="list-name">Recent</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" focusable="false" fill="#4285f4"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+            <span class="list-name">Starred</span>
+          </a>
+        </li>
+        <li>
+         <a href="">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false" class="a-s-fa-Ha-pa"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+            <span class="list-name">Bin</span>
+         </a>
+        </li><hr>
+        <li>
+          <a href="">
+            <svg class="" width="24px" height="24px" viewBox="0 0 24 24" fill="#4285f4" focusable="false"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"></path></svg>
+            <span class="list-name">Backups</span>
+          </a><hr>
+      </ul>
+      <div class="uses-detail">
+        <span>1.6 GB 0f 15 GB used</span>
+        <a href="#">Uppgrade storage</a>
+      </div>
+    </nav>
+    <div class="user-upload">
+      <span class="access-files">Quick access</span>
+      <div class="content">
+        <img src="images/con-image1.png" alt="">
+        <div class="data-box">
+          <span class="title-detail">index.html</span>
+          <span class="update-detail">you shared it yesterday</span>
+        </div>
+      </div>
+      <div class="content">
+        <img src="images/con-image2.png" alt="">
+        <div class="data-box">
+          <span class="title-detail">IMG_15458855_1152.jpg</span>
+          <span class="update-detail">you uploaded it yesterday</span>
+        </div>
+      </div>
+      <div class="content">
+        <img class="change-style"  src="images/con-image3.png" alt="">
+        <div class="data-box">
+          <span class="title-detail">JAVA SCRIPT</span>
+          <span class="update-detail">you edited this month</span>
+        </div>
+      </div>
+      <div class="content">
+        <img class="change-style" src="images/con-image4.png" alt="">
+        <div class="data-box">
+          <span class="title-detail">HTML & CSS MATERIALS</span>
+          <span class="update-detail">you edited this month</span>
+        </div>
+      </div>
+      <div class="content">
+        <img class="change-style" src="images/con-image5.png" alt="">
+        <div class="data-box">
+          <span class="title-detail">HTML notes</span>
+          <span class="update-detail">you edited this month</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <span class="access-files">Folders</span>
+      <div class="folder">
+        <span class="folder-title">Frontent Learning</span>
+      </div>
+      <div class="folder">
+        <span class="folder-title">My Photos</span>
+      </div>
+      <div class="folder">
+        <span class="folder-title">Vijay Kumar</span>
+      </div>
+      <div class="clear"></div>
+      <span class="access-files">Files</span>
+      <div class="file">
+        <img src="images/file-icon.png" alt="">
+        <span class="file-title">Vijay m.rar</span>
+      </div>
+    </div>
+  </main>
+  <!-- /main -->
+  <script src="script.js"></script>
+</body>
+</html>
